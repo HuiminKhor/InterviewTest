@@ -1,0 +1,1066 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+    margin: auto;
+    font-family: 'Bree Serif', serif;
+}
+
+.navbar {
+    padding: 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: dimgrey;
+    text-decoration: none;
+    padding-right: 40px;
+    padding-left: 40px;
+}
+
+.navbar a:hover {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    background-image: url(images/border\ arrow.png);
+    background-size: contain;
+    background-color: #399ebd;
+    color: white;
+}
+
+.logo {
+    padding-left: 150px;
+    height: 70px;
+    float: left;
+}
+
+.blog {
+    padding-left: 25px ;
+    padding-right: 25px;
+    background-color: rgb(236, 128, 109);
+    color: white;
+}
+
+span.blog:hover {
+    background-color: rgb(243, 157, 142);
+    color: black;
+    cursor: pointer;
+}
+
+
+
+/* background image for modal */
+.bg-img {
+    background-image: url(http://jmd.im/black_wallpapers/IV/phone/BLACK_IV_phone-3.jpg);
+    background-size: cover;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* modal title */
+.mdtitle {
+    font-size: 30px;
+    margin: auto;
+    padding-top: 22px;
+    text-align: center;
+    color: lightgoldenrodyellow;
+}  
+  
+/* Full-width inputs */
+input[type=text], [type=email], [type=password], [type=tel] {
+    color: lightgoldenrodyellow;
+    font-size: 16px;
+    width: 100%; 
+    padding: 12px 47px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+#code {
+    color: #ccc;
+    padding-bottom: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: transparent; 
+}
+
+option {
+    background-color: black;
+}
+
+
+/* label tag */
+label {
+    width: 100%;
+    color: lightgoldenrodyellow;
+}
+
+.checkbox {
+    font-size: 16px;
+    color: rgb(112, 112, 87);
+}
+
+.member {
+      font-size: 14px;
+      padding-top: 17px;
+      text-align: center;
+      color: lightslategray;
+}
+
+/* validation message */
+#message {
+    color:  rgb(124, 124, 117);
+    font-size: 14px;
+}
+
+#message p {
+    margin-top: 0;
+}
+
+/* validation check */
+.valid {
+    color: green;
+}
+
+.invalid {
+    color:  rgb(124, 124, 117);
+}
+
+
+/* modal button  */
+.popup {
+    float: right;
+}
+
+.loginbtn {
+    background-color: #399ebd;
+    border-radius: 10px;
+    color: black;
+    padding: 11px 20px;
+    border:0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
+.registerbtn {
+    margin-right: 150px;
+    margin-left: 17px;
+    color: black;
+    padding: 11px 20px;
+    background-color: rgb(236, 128, 109);
+    border: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+  
+  
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+  
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    padding: 14px 18px;
+    background-image: linear-gradient(-90deg, #541E1B , #900d09);
+}
+
+/* login button in modal */
+.mdlogin {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    width: 100%;
+    background-image: linear-gradient(-90deg, #98720b, #efc501);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+  
+
+/* Add padding to containers */
+.container {
+    padding: 55px;
+}
+  
+/* The "Forgot password" text */
+.forgtpsw a {
+    font-size: 14px;
+    color: goldenrod;
+    text-decoration: none;
+}
+  
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+span.psw {
+    display: block;
+    float: none;
+}
+.cancelbtn {
+      width: 100%;
+}
+}
+
+.input-icons i { 
+    position: absolute; 
+} 
+  
+  
+.icon { 
+    padding-top: 21px; 
+    color: green; 
+    min-width: 50px; 
+    text-align: center; 
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 27%; /* Could be more or less, depending on screen size */
+}
+  
+/* The Close Button */
+.close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+/* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+}
+  
+/* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+
+/* slider part */
+
+#mycarousel {
+    position: relative;
+    width: 100%;
+}
+
+#innercarousel {
+    z-index: -1;
+}
+
+#caption {
+    position: absolute;
+    color: white;
+    z-index: 1;
+    top: 10%;
+}
+
+/* learn more button */
+.learn {
+    background-color: rgb(236, 128, 109);
+    color: white;
+    font-size: 20px;
+    border: 0;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.learn :hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+/*services section */
+
+.services {
+    position: relative;
+    text-align: center;
+}
+
+.oursrv {
+    color: white;
+    background-color:  #399ebd;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+ul#horizontal-list li {
+    display: inline;
+}
+
+/* resizing icon image */
+ul img {
+    height: 150px;
+}
+
+.fluidtable {
+    background: rgb(65, 76, 92);
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+ul#fluidtable-list {
+	min-width: 696px;
+	list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+ul#fluidtable-list li {
+    position: relative;
+    padding: 17px;
+    display: inline;
+}
+
+ul#fluidtable-list img {
+    height: 180px;
+}
+
+.first, .second, .third {
+    position: relative;
+}
+
+.details {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+/* image hovering */
+.first:hover .imgone {
+    opacity: 0.3;
+}
+.second:hover .imgtwo {
+    opacity: 0.3;
+}
+.third:hover .imgthree {
+    opacity: 0.3;
+}
+
+.first:hover .details {
+    opacity: 1;
+    color: white;
+    border-bottom-style: solid;
+    cursor: pointer;
+    padding: 15px;
+}
+.second:hover .details {
+    opacity: 1;
+    color: white;
+    border-bottom-style: solid;
+    cursor: pointer;
+    padding: 15px;
+}
+.third:hover .details {
+    opacity: 1;
+    color: white;
+    border-bottom-style: solid;
+    cursor: pointer;
+    padding: 15px;
+}
+
+
+/* portfolio section */
+
+.big-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.more-works {
+    height: 30px;
+    background-color: #399ebd;
+    color: white;
+    border: 0;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.our-port {
+    color:  rgb(236, 128, 109);
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.porttitle {
+    color:  rgb(236, 128, 109);
+    padding-top: 10px;
+}
+
+.portpas {
+    color: #ccc;
+}
+
+
+/* What we offer section */
+
+.offer-fluid {
+    margin-top: 10px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.offer-content {
+    text-align: center;
+}
+
+.offer-title {
+    color: #399ebd;
+}
+
+.offer-con {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+ul#offer-list {
+	min-width: 696px;
+	list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul#offer-list li {
+    position: relative;
+    padding: 17px;
+    display: inline;
+}
+
+.offer-option {
+    color: #399ebd;
+}
+
+/* button for details under offer */
+.offer-btn {
+    background-color: #399ebd;
+    color: white;
+    border: 0;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px;
+    float: right;
+}
+
+/* Testimomials section */
+
+.test-fluid {
+    margin-top: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.test-content {
+    text-align: center;
+}
+
+.test-title {
+    color: #399ebd;
+    padding-bottom: 25px;
+}
+
+.test-message {
+    font-size: 25px;
+    color: dimgray;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+/* Testimonial Avatar */
+
+
+ul#avatar {
+	min-width: 696px;
+	list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+ul#avatar li {
+    position: relative;
+    padding: 17px;
+    display: inline;
+}
+
+ul#avatar img {
+    border-radius: 50%;
+    height: 180px;
+}
+
+.one, .two, .three {
+    position: relative;
+}
+
+.johndoe {
+    font-size: 12px;
+    opacity: 0;
+    position: absolute;
+    top: -30%;
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+}
+
+
+/* avatar hovering */
+.one:hover .oneavar {
+    background-color: rgb(236, 128, 109);
+}
+.two:hover .twoavar {
+    background-color: rgb(236, 128, 109);
+}
+.three:hover .threeavar {
+    background-color: rgb(236, 128, 109);
+}
+
+.one:hover .johndoe {
+    opacity: 1;
+    color: coral;
+    padding: 15px;
+}
+.two:hover .johndoe {
+    opacity: 1;
+    color: coral;
+    padding: 15px;
+}
+.three:hover .johndoe {
+    opacity: 1;
+    color: coral;
+    padding: 15px;
+}
+
+/* footer section */
+
+.row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background-color: rgb(65, 76, 92);
+}
+
+ul#row-list {
+	list-style: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding:0px;
+
+}
+
+ul#row-list li {
+    padding: 30px;
+    display: inline;
+}
+
+/* signup button */
+.signup {
+    color: white;
+    background-color: #399ebd;
+    border: 0;
+    float: right;
+    padding: 10px;
+}
+
+.mail {
+    color: rgb(0, 119, 255);
+}
+
+.project .card1 {
+    position: relative;
+    display: flex;
+    flex-direction: unset;
+    border: 0;
+}
+
+
+.project .card1 .content1 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.imgbx img {
+    height:100px;
+}
+
+.contact .con-box {
+    position: relative;
+    display: flex;
+    flex-direction: unset;
+    border: 0;
+    padding-bottom: 35px;
+}
+
+.contact .con-box .con-num {
+    margin-left: 20px;
+    margin-top: 22px;
+}
+
+.con-box img {
+    height: 100px;
+}
+
+/* word styling in footer */
+
+.bigtitle {
+    color: rgb(236, 128, 109);
+    padding-bottom: 30px;
+}
+
+.msg {
+    color: #ccc;
+}
+
+.lines {
+    background-color: #ccc;
+    height: 1px;
+}
+
+/* media screen */
+@media screen and (max-width: 1270px) { 
+    
+    /* navbar */
+
+    .navbar a {
+        color: dimgrey;
+        text-decoration: none;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    
+    .navbar a:hover {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #399ebd;
+        color: white;
+    }
+    
+    .logo {
+        padding-left: 100px;
+        height: 40px;
+        float: left;
+    }
+    
+    .blog {
+        padding-left: 25px ;
+        padding-right: 20px;
+        background-color: rgb(236, 128, 109);
+        color: white;
+    }
+
+    .loginbtn {
+        background-color: #399ebd;
+        border-radius: 10px;
+        color: black;
+        padding: 5px 10px;
+        border:0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        cursor: pointer;
+    }
+    
+    .registerbtn {
+        margin-right: 10px;
+        margin-left: 17px;
+        color: black;
+        padding: 5px 10px;
+        background-color: rgb(236, 128, 109);
+        border: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        cursor: pointer;
+    }
+
+    /* carousel */
+    .text {
+        font-size: 25px;
+    }
+
+    .passage {
+        font-size: 10;
+    }
+
+    .learn {
+        background-color: rgb(236, 128, 109);
+        color: white;
+        font-size: 15px;
+        border: 0;
+        padding: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    /* services */
+
+    .caption1 {
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    .msg1 {
+        font-size: 10px;
+    }
+
+    
+    ul img {
+        height: 100px;
+    }
+
+    .more-works {
+        background-color: #399ebd;
+        color: white;
+        border: 0;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    
+    /* portfolio */
+    .our-port {
+        color:  rgb(236, 128, 109);
+        padding-top: 10px;
+        padding-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .porttitle {
+        font-size: 15px;
+        color:  rgb(236, 128, 109);
+        padding-top: 10px;
+    }
+    
+    .portpas {
+        font-size: 10px;
+        color: #ccc;
+    }
+
+    ul#fluidtable-list img {
+        height: 100px;
+    }
+
+    ul#fluidtable-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    ul#fluidtable-list li {
+        position: relative;
+        padding: 17px;
+        display: inline;
+    }
+
+    .details {
+        font-size: 15px;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    /* what we offer */
+
+    .offer-title {
+        font-size: 20px;
+        color: #399ebd;
+    }
+    
+    .oofer-message {
+        font-size: 12px;
+    }
+
+    .offer-con {
+        padding-bottom: 20px;
+        padding-top: 30px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    
+    ul#offer-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    ul#offer-list li {
+        position: relative;
+        padding: 17px;
+        display: inline;
+    }
+    
+    .offer-option {
+        font-size: 15px;
+        color: #399ebd;
+    }
+
+    .option-msg {
+        font-size: 10px;
+    }
+    
+    /* button for details under offer */
+    .offer-btn {
+        font-size: 12px;
+        background-color: #399ebd;
+        color: white;
+        border: 0;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        float: right;
+    }
+
+    /* Testimonials */
+
+    .test-title {
+        font-size: 20px;
+        color: #399ebd;
+        padding-bottom: 25px;
+    }
+    
+    .test-message {
+        font-size: 12px;
+        color: dimgray;
+        font-weight: bold;
+        padding-bottom: 60px;
+    }
+    
+    ul#avatar {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    
+    ul#avatar li {
+        position: relative;
+        padding: 17px;
+        display: inline;
+    }
+    
+    ul#avatar img {
+        border-radius: 50%;
+        height: 100px;
+    }
+    
+    .one, .two, .three {
+        position: relative;
+    }
+    
+    .johndoe {
+        font-size: 5px;
+        opacity: 0;
+        position: absolute;
+        top: -30%;
+        /* left: 50%; */
+        /* transform: translate(-50%, -50%); */
+    }
+    
+    
+    /* avatar hovering */
+    .one:hover .oneavar {
+        background-color: rgb(236, 128, 109);
+    }
+    .two:hover .twoavar {
+        background-color: rgb(236, 128, 109);
+    }
+    .three:hover .threeavar {
+        background-color: rgb(236, 128, 109);
+    }
+    
+    .one:hover .johndoe {
+        opacity: 1;
+        color: coral;
+        padding: 15px;
+    }
+    .two:hover .johndoe {
+        opacity: 1;
+        color: coral;
+        padding: 15px;
+    }
+    .three:hover .johndoe {
+        opacity: 1;
+        color: coral;
+        padding: 15px;
+    }
+
+    /* contact section */
+
+    
+    
+    ul#row-list li {
+        padding: 30px;
+        display: inline;
+    }
+    
+    /* signup button */
+    .signup {
+        font-size: 12px;
+        color: white;
+        background-color: #399ebd;
+        border: 0;
+        float: right;
+    }
+    
+    .mail {
+        font-size: 13px;
+        color: rgb(0, 119, 255);
+    }
+    
+    .project .card1 .content1 {
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+    
+    .imgbx img {
+        height:50px;
+    }
+    
+    .contact .con-box {
+        position: relative;
+        display: flex;
+        flex-direction: unset;
+        border: 0;
+    }
+    
+    .contact .con-box .con-num {
+        margin-left: 20px;
+        margin-top: 12px;
+    }
+    
+    .con-box img {
+        height: 50px;
+    }
+    
+    /* word styling in footer */
+    
+    .bigtitle {
+        font-size: 20px;
+        color: rgb(236, 128, 109);
+        padding-bottom: 25px;
+    }
+    
+    .msg {
+        font-size: 10px;
+        color: #ccc;
+    }
+    
+    .lines {
+        background-color: #ccc;
+    }
+
+}    
